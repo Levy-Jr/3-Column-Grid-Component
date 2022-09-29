@@ -1,0 +1,120 @@
+:root{
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /*background, headings, buttons */
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.5);
+
+  --Very-light-gray: hsl(0, 0%, 95%);
+  --Fs-deca: 'Lexend Deca', sans-serif;
+  --FS-Big-Shoulders: 'Big Shoulders Display', cursive; 
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--Fs-deca);
+  background-color: var(--Very-light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(95%, 50rem);
+}
+
+article{
+  padding: 2rem;
+}
+
+article h1{
+  font-family: var(--FS-Big-Shoulders);
+  text-transform: uppercase;
+  color: var(--Very-light-gray);
+  font-size: 2.5em;
+  padding: 1rem 0rem;
+}
+
+article p{
+  color: var(--Transparent-white-paragraphs);
+  font-family: var(--Fs-deca);
+  font-size: .938rem;
+  line-height: 1.7;
+}
+
+.orange-bg{
+  background-color: var(--Bright-orange);
+}
+
+.dark-cyan--bg{
+  background-color: var(--Dark-cyan);
+}
+
+.very-dark-cyan--bg{
+  background-color: var(--Very-dark-cyan);
+}
+
+.button{
+  margin-top: 4rem;
+  display: inline-block;
+  cursor: pointer;
+  font-family: var(--Fs-deca);
+  padding: .7rem 1.4rem;
+  text-align: center;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 1.4rem;
+}
+
+.orange-bg .button{
+  color: var(--Bright-orange);
+}
+
+.dark-cyan--bg .button{
+  color: var(--Dark-cyan);
+}
+
+.very-dark-cyan--bg{
+  color: var(--Very-dark-cyan);
+}
+
+.button:hover{
+  background-color: var(--Transparent-white-paragraphs);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px){
+  body{
+    padding: 4rem 0rem;
+  }
+  .container{
+    grid-template-columns: 1fr;
+    max-width: 350px;
+    border-radius: .4rem;
+  }
+
+  article{
+    padding: 1.5rem 2.5rem;
+  }
+
+  .orange-bg{
+    border-radius: .4rem .4rem 0rem 0rem;
+  }
+
+  .very-dark-cyan--bg{
+    border-radius: 0rem 0rem .4rem .4rem;
+  }
+
+  .attribution{
+    display: none;
+  }
+}
