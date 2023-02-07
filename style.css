@@ -29,11 +29,13 @@ body{
 .container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: min(95%, 50rem);
+  width: min(95%, 60rem);
+  border-radius: .4rem;
+  overflow: hidden;
 }
 
 article{
-  padding: 2rem;
+  padding: 5rem 3.25rem;
 }
 
 article h1{
@@ -92,26 +94,23 @@ article p{
   color: #fff;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 48em){
   body{
     padding: 4rem 0rem;
   }
+
   .container{
     grid-template-columns: 1fr;
     max-width: 350px;
-    border-radius: .4rem;
   }
 
   article{
     padding: 1.5rem 2.5rem;
   }
 
-  .orange-bg{
-    border-radius: .4rem .4rem 0rem 0rem;
-  }
-
-  .very-dark-cyan--bg{
-    border-radius: 0rem 0rem .4rem .4rem;
+  .button{
+    margin-top: 0rem;
+    margin-block: 1rem;
   }
 
   .attribution{
